@@ -43,7 +43,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/fstab.qcom:root/fstab.qcom \
     $(COMMON_PATH)/rootdir/init.qcom.rc:root/init.qcom.rc \
-    $(COMMON_PATH)/rootdir/init.boringssl.rc:root/init.boringssl.rc \
+    $(COMMON_PATH)/rootdir/init.shims.rc:root/init.shims.rc \
     $(COMMON_PATH)/rootdir/system/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
     $(COMMON_PATH)/rootdir/ueventd.qcom.rc:root/ueventd.qcom.rc
 
@@ -78,13 +78,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libboringssl-compat
 
-# Camera shim 
-PRODUCT_PACKAGES += \
-    libshim_camera
-
 # RQBalance-PowerHAL configuration
 PRODUCT_COPY_FILES += \
      $(COMMON_PATH)/rootdir/system/etc/rqbalance_config.xml:system/etc/rqbalance_config.xml
+
+# Camera
+PRODUCT_PACKAGES += \
+    libshim_cald \
+    libshim_camera
 
 # IPC Security Config
 PRODUCT_COPY_FILES += \

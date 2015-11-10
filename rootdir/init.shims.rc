@@ -15,7 +15,10 @@
 # limitations under the License.
 #
 
- on init
+on init
     # BoringSSL hacks
     export LD_PRELOAD "libboringssl-compat.so"
+
+    # Symbols required for SONY blobs
+    export LD_SHIM_LIBS "/system/lib/libcammw.so|libshim_cald.so:/system/lib/hw/camera.qcom.so|libshim_camera.so"
 
