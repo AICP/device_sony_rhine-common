@@ -115,6 +115,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     macaddrsetup
 
+# RIL
+BOARD_RIL_CLASS := ../../../$(COMMON_PATH)/ril/
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.ril_class=SonyRIL
+
 # TimeKeep
 PRODUCT_PACKAGES += \
     timekeep \
