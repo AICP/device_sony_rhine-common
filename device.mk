@@ -14,7 +14,7 @@
 
 SOMC_PLATFORM := rhine
 
-SONY_ROOT = device/sony/rhine/rootdir
+SONY_ROOT = device/sony/rhine-common/rootdir
 
 # Media
 PRODUCT_COPY_FILES += \
