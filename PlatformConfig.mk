@@ -59,4 +59,4 @@ BOARD_HAVE_BLUETOOTH_QCOM := true
 # SELinux
 BOARD_SEPOLICY_DIRS += device/sony/rhine-common/sepolicy
 
-include device/sony/common/CommonConfig.mk
+include device/sony/common/CommonConfigOmni.mk
