@@ -14,8 +14,5 @@
 
 include device/sony/rhine-common/PlatformConfig.mk
 
-# TWRP flags
-TW_THEME := portrait_hdpi
-TW_HAS_NO_RECOVERY_PARTITION := true
-TW_DEFAULT_EXTERNAL_STORAGE := true
-TW_NO_USB_STORAGE := true
+#Inherit TWRP Config
+include device/sony/rhine-common/twrp.mk
