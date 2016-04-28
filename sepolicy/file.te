@@ -1,0 +1,2 @@
+# Vibrator SELinux
+type sysfs_vibrator, fs_type, sysfs_type;
