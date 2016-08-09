@@ -12,11 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include device/sony/rhine-common-omni/PlatformConfig.mk
+include device/sony/rhine-common/PlatformConfig.mk
 
 #Inherit TWRP Config
-include device/sony/rhine-common-omni/twrp.mk
+include device/sony/rhine-common/twrp.mk
 
 # Custom Boot Image
 BOARD_CUSTOM_BOOTIMG := true
-BOARD_CUSTOM_BOOTIMG_MK := device/sony/common-omni/boot/custombootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/sony/common/boot/custombootimg.mk

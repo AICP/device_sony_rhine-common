@@ -40,7 +40,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 12891143680
 BOARD_CACHEIMAGE_PARTITION_SIZE := 209715200
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_RECOVERY_FSTAB = device/sony/rhine-common-omni/rootdir/fstab.rhine
+TARGET_RECOVERY_FSTAB = device/sony/rhine-common/rootdir/fstab.rhine
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
@@ -60,7 +60,7 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # BT definitions for Qualcomm solution
 BLUETOOTH_HCI_USE_MCT := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/rhine-common-omni/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/rhine-common/bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 
@@ -69,9 +69,9 @@ BOARD_HAVE_QCOM_FM := true
 TARGET_QCOM_NO_FM_FIRMWARE := true
 
 # Props for hotplugging
-TARGET_SYSTEM_PROP += device/sony/rhine-common-omni/system.prop
+TARGET_SYSTEM_PROP += device/sony/rhine-common/system.prop
 
 # SELinux
-BOARD_SEPOLICY_DIRS += device/sony/rhine-common-omni/sepolicy
+BOARD_SEPOLICY_DIRS += device/sony/rhine-common/sepolicy
 
-include device/sony/common-omni/CommonConfigOmni.mk
+include device/sony/common/CommonConfigOmni.mk

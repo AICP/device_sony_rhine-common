@@ -11,4 +11,4 @@ TW_NO_USB_STORAGE := true
 
 # Recovery
 PRODUCT_COPY_FILES += \
-    device/sony/rhine-common-omni/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab
+    device/sony/rhine-common/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab
