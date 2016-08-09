@@ -12,11 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, device/sony/common/common_omni.mk)
+$(call inherit-product, device/sony/common-omni/common_omni.mk)
 
 SOMC_PLATFORM := rhine
 
-SONY_ROOT := device/sony/rhine-common/rootdir
+SONY_ROOT := device/sony/rhine-common-omni/rootdir
 
 # ANT+ permissions
 PRODUCT_COPY_FILES += \
