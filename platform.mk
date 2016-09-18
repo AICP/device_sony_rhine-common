@@ -104,7 +104,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Qualcom FMRadio
 PRODUCT_PACKAGES += \
-    qcom.fmradio \
     FMRadio
 
 # Telephony Packages (AOSP)
