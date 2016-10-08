@@ -20,3 +20,7 @@ include device/sony/rhine-common/twrp.mk
 # Custom Boot Image
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := device/sony/common/boot/custombootimg.mk
+
+# Custom QCOM display HAL
+SONY_AOSP_DISPLAY := true
+$(call project-set-path,qcom-display,hardware/sony/display)
