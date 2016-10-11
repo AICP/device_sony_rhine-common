@@ -23,17 +23,9 @@ PRODUCT_PACKAGES += \
     com.dsi.ant.antradio_library \
     libantradio
 
-# Gello
-PRODUCT_PACKAGES += \
-    Gello
-
 # Sensors config
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/etc/sec_config:system/etc/sec_config
-
-# Properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    telephony.lteOnGSMDevice=1
 
 # WIFI Tethering
 PRODUCT_COPY_FILES += \
