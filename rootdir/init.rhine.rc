@@ -25,9 +25,6 @@ on fs
     write /sys/kernel/boot_adsp/boot 1
 
 on boot
-    # Vibrator sysfs PATH
-    chown system /sys/devices/virtual/timed_output/vibrator/vtg_level
-
     # WCNSS enable
     write /dev/wcnss_wlan 1
 
