@@ -21,3 +21,6 @@ BOARD_HARDWARE_CLASS += device/sony/rhine/cmhw
 # Kernel
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_SOURCE := kernel/sony/msm
+
+# Nfc
+TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
