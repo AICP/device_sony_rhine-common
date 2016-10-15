@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-SONY_ROOT := device/sony/rhine/rootdir
+SONY_ROOT := device/sony/rhine-common/rootdir
 
 # ANT+
 PRODUCT_COPY_FILES += \
