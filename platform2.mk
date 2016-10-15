@@ -23,6 +23,10 @@ PRODUCT_PACKAGES += \
     com.dsi.ant.antradio_library \
     libantradio
 
+# Snap Cmaera
+PRODUCT_PACKAGES += \
+    Snap
+
 # Sensors config
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/etc/sec_config:system/etc/sec_config
