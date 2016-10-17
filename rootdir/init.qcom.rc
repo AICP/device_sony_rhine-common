@@ -68,15 +68,8 @@ on property:init.svc.bootanim=running
     write /sys/class/graphics/fb0/blank 1
     write /sys/class/graphics/fb0/blank 0
 
-service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
-    class late_start
-    user bluetooth
-    group qcom_oncrpc bluetooth net_bt_admin system
-    disabled
-    oneshot
-
 on property:bluetooth.hciattach=true
-    start hciattach
+    setprop bluetooth.status on
 
 on property:bluetooth.hciattach=false
     setprop bluetooth.status off
