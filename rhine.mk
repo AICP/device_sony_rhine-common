@@ -44,7 +44,6 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/fstab.qcom:root/fstab.qcom \
     $(COMMON_PATH)/rootdir/init.qcom.rc:root/init.qcom.rc \
     $(COMMON_PATH)/rootdir/init.camera.rc:root/init.camera.rc \
-    $(COMMON_PATH)/rootdir/system/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
     $(COMMON_PATH)/rootdir/ueventd.qcom.rc:root/ueventd.qcom.rc
 
 PRODUCT_COPY_FILES += \
