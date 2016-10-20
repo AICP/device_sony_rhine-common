@@ -31,10 +31,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/etc/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf
 
-ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    qcom.bluetooth.soc=smd \
+    qcom.bluetooth.soc=smd
+
+ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.bluetooth.opp=true \
     ro.qualcomm.bluetooth.hfp=true \
     ro.qualcomm.bluetooth.hsp=true \
