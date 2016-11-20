@@ -38,17 +38,3 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     qcom.bluetooth.soc=smd
-
-ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.qualcomm.bluetooth.opp=true \
-    ro.qualcomm.bluetooth.hfp=true \
-    ro.qualcomm.bluetooth.hsp=true \
-    ro.qualcomm.bluetooth.pbap=true \
-    ro.qualcomm.bluetooth.ftp=true \
-    ro.qualcomm.bluetooth.map=true \
-    ro.qualcomm.bluetooth.nap=true \
-    ro.bluetooth.sap=false \
-    ro.bluetooth.dun=false \
-    ro.bluetooth.hfp.ver=1.7
-endif
