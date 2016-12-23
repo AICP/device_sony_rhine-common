@@ -1356,6 +1356,7 @@ typedef struct {
     int sony_network_field;     //What the network is here?
     RIL_LTE_SignalStrength_v8   LTE_SignalStrength;
     RIL_TD_SCDMA_SignalStrength TD_SCDMA_SignalStrength;
+    int unused1, unused2;
 } RIL_SignalStrength_v10;
 
 typedef struct {
