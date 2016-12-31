@@ -1,0 +1,17 @@
+[
+  {
+    "repository":   "AICP/device_sony_common",
+    "target_path":  "device/sony/common",
+    "branch":       "n7.1"
+  },
+  {
+    "repository":   "SpiritCroc/android_kernel_sony_msm",
+    "target_path":  "kernel/sony/msm",
+    "branch":       "AICP-n7.1-sony"
+  },
+  {
+    "repository":   "SpiritCroc/android_hardware_sony_display",
+    "target_path":  "hardware/sony/display",
+    "branch":       "AICP-n7.1-sonycm"
+  }
+]
