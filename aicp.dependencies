@@ -13,5 +13,10 @@
     "repository":   "SpiritCroc/android_hardware_sony_display",
     "target_path":  "hardware/sony/display",
     "branch":       "AICP-n7.1-sonycm"
+  },
+  {
+    "repository":   "SatyrBen/vendor-qcom-extras",
+    "target_path":  "vendor/qcom/extras",
+    "branch":       "master"
   }
 ]
