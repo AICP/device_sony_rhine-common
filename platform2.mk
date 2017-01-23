@@ -34,3 +34,7 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     qcom.bluetooth.soc=smd
+
+# Blur
+PRODUCT_COPY_FILES += \
+	vendor/qcom/binaries/msm8974/grabhics/proprietary/lib/libuiblur.so:system/vendor/lib/libuiblur.so

@@ -13,5 +13,10 @@
     "repository":   "SpiritCroc/android_hardware_sony_display",
     "target_path":  "hardware/sony/display",
     "branch":       "AICP-n7.1-sonycm"
+  },
+  {
+    "repository":   "TheMuppets/proprietary_vendor_qcom_binaries",
+    "target_path":  "vendor/qcom/binaries",
+    "branch":       "cm-14.1"
   }
 ]
