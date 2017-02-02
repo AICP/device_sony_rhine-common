@@ -17,6 +17,6 @@
   {
     "repository":   "SatyrBen/vendor-qcom-extras",
     "target_path":  "vendor/qcom/extras",
-    "branch":       "master"
+    "branch":       "android-6.0.1"
   }
 ]
