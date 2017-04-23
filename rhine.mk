@@ -140,10 +140,6 @@ endif
 PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
 
-# Off mode charger
-PRODUCT_PACKAGES += \
-    charger_res_images
-
 # WiFi
 PRODUCT_PACKAGES += \
     libQWiFiSoftApCfg \
