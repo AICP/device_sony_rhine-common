@@ -19,6 +19,7 @@ TARGET_SPECIFIC_HEADER_PATH += device/sony/rhine-common/include
 
 # Platform
 BOARD_VENDOR_PLATFORM := rhine
+PRODUCT_PLATFORM:= rhine
 
 # Kernel information
 BOARD_KERNEL_BASE     := 0x00000000
