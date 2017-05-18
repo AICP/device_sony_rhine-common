@@ -76,6 +76,11 @@ PRODUCT_PACKAGES += \
     FM2 \
     FMRecord
 
+
+# RQBalance-PowerHAL configuration
+PRODUCT_COPY_FILES += \
+     $(COMMON_PATH)/rootdir/system/etc/rqbalance_config.xml:system/etc/rqbalance_config.xml
+
 # IPC Security Config
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/etc/sec_config:system/etc/sec_config
