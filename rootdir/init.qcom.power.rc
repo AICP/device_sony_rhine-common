@@ -97,6 +97,10 @@ on charger
 on boot
     trigger enable-low-power
 
+    # Set max mA current for usb/dc charger
+    write /sys/class/power_supply/qpnp-dc/current_max 1800000
+    write /sys/class/power_supply/usb/current_max 1500000
+
 on property:init.svc.recovery=running
     trigger enable-low-power
 
