@@ -166,3 +166,13 @@
 /sys/devices/01-qcom,leds-d800/leds/wled:backlight              brightness          0664 system system
 /sys/devices/mdp.0/qcom,mdss_fb_primary.174/leds/lcd-backlight  brightness          0664 system system
 /sys/devices/mdp.0/qcom,mdss_fb_primary.174/leds/lcd-backlight  max_brightness      0664 system system
+
+# TA
+/dev/block/bootdevice/by-name/TA 0770  tad      tad
+/dev/block/platform/msm_sdcc.1/by-name/TA 0770 tad tad
+
+/dev/cam                  0660   root       camera
+/dev/pmem                 0660   system     graphics
+/dev/pmem_adsp*           0660   system     audio
+/dev/pmem_camera*         0660   system     camera
+/dev/msm_hw3dm            0660   system     graphics
