@@ -144,6 +144,11 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin \
     $(COMMON_PATH)/rootdir/system/etc/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf
 
+# Media profile
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/media_codecs.xml:system/etc/media_codecs.xml \
+    $(COMMON_PATH)/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
+
 # Audio offload
 PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.buffer.size.kb=32 \
