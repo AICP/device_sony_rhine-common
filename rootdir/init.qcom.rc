@@ -16,6 +16,7 @@
 #
 
 import /init.device.rc
+import /init.boringssl.rc
 import /init.common.rc
 
 on early-boot
