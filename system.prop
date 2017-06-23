@@ -1,0 +1,57 @@
+wlan.driver.ath=0
+
+# Audio offload
+audio.offload.buffer.size.kb=32
+audio.offload.gapless.enabled=false
+audio.offload.multiple.enabled=false
+audio.offload.pcm.enable=enable
+av.offload.enable=enable
+av.streaming.offload.enable=enable
+
+# Enable AAC 5.1 output
+media.aac_51_output_enabled=true
+
+# Voice Call
+ro.qc.sdk.audio.fluencetype=none
+persist.audio.dualmic.config=endfire
+persist.audio.fluence.voicecall=true
+persist.audio.fluence.voicerec=false
+persist.audio.fluence.speaker=true
+
+# aDSP
+ro.qualcomm.sensors.qmd=true
+debug.qualcomm.sns.hal=w
+ro.qc.sdk.sensors.gestures=false
+ro.qc.sensors.max_accel_rate=false
+ro.qc.sensors.max_gyro_rate=false
+ro.qc.sensors.max_mag_rate=false
+ro.qc.sensors.smgr_mag_cal_en=true
+ro.qualcomm.sensors.pedometer=false
+ro.qc.sensors.step_counter=true
+ro.qc.sensors.step_detector=true
+ro.qualcomm.sensors.pam=false
+ro.qualcomm.sensors.scrn_ortn=false
+ro.qualcomm.sensors.georv=true
+ro.qualcomm.sensors.smd=sony
+
+# Bluetooth
+ro.qualcomm.bt.hci_transport=smd
+ro.bt.bdaddr_path=/data/etc/bluetooth_bdaddr
+
+# HDMI
+persist.demo.hdmirotationlock=false
+
+# MDP
+debug.mdpcomp.logs=0
+
+# Time
+persist.timed.enable=true
+
+# Touchscreen
+ro.input.noresample=1
+
+# WFD
+persist.debug.wfd.enable=1
+persist.sys.wfd.virtual=0
+
+

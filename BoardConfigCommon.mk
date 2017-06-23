@@ -58,6 +58,9 @@ TARGET_INIT_VENDOR_LIB := libinit_rhine
 BOARD_SEPOLICY_DIRS += \
     device/sony/rhine-common/sepolicy
 
+# Platform props
+TARGET_SYSTEM_PROP += device/sony/rhine-common/system.prop
+
 # Wifi
 BOARD_HAS_QCOM_WLAN              := true
 BOARD_WLAN_DEVICE                := qcwcn
