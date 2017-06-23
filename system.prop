@@ -18,21 +18,36 @@ persist.audio.fluence.voicecall=true
 persist.audio.fluence.voicerec=false
 persist.audio.fluence.speaker=true
 
-# aDSP
-ro.qualcomm.sensors.qmd=true
-debug.qualcomm.sns.hal=w
-ro.qc.sdk.sensors.gestures=false
-ro.qc.sensors.max_accel_rate=false
-ro.qc.sensors.max_gyro_rate=false
-ro.qc.sensors.max_mag_rate=false
-ro.qc.sensors.smgr_mag_cal_en=true
-ro.qualcomm.sensors.pedometer=false
-ro.qc.sensors.step_counter=true
-ro.qc.sensors.step_detector=true
-ro.qualcomm.sensors.pam=false
-ro.qualcomm.sensors.scrn_ortn=false
-ro.qualcomm.sensors.georv=true
-ro.qualcomm.sensors.smd=sony
+# aDSP sensors
+## max rate
+ro.qti.sensors.max_accel_rate=false
+ro.qti.sensors.max_gyro_rate=false
+ro.qti.sensors.max_mag_rate=false
+ro.qti.sensors.max_geomag_rotv=50
+## sensor type
+ro.qti.sdk.sensors.gestures=false
+ro.qti.sensors.pedometer=false
+ro.qti.sensors.step_detector=true
+ro.qti.sensors.step_counter=true
+ro.qti.sensors.pam=false
+ro.qti.sensors.scrn_ortn=false
+ro.qti.sensors.smd=true
+ro.qti.sensors.game_rv=true
+ro.qti.sensors.georv=true
+ro.qti.sensors.cmc=false
+ro.qti.sensors.bte=false
+ro.qti.sensors.fns=false
+ro.qti.sensors.qmd=false
+ro.qti.sensors.amd=false
+ro.qti.sensors.rmd=false
+ro.qti.sensors.vmd=false
+ro.qti.sensors.gtap=false
+ro.qti.sensors.tap=false
+ro.qti.sensors.facing=false
+ro.qti.sensors.tilt=false
+ro.qti.sensors.tilt_detector=true
+ro.qti.sensors.dpc=false
+ro.qti.sensors.wu=false
 
 # Bluetooth
 ro.qualcomm.bt.hci_transport=smd
