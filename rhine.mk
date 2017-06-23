@@ -78,25 +78,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libboringssl-compat
 
+# Camera shim 
+PRODUCT_PACKAGES += \
+    libshim_camera
+
 # RQBalance-PowerHAL configuration
 PRODUCT_COPY_FILES += \
      $(COMMON_PATH)/rootdir/system/etc/rqbalance_config.xml:system/etc/rqbalance_config.xml
-
-# GPS
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/gps/flp.conf:system/etc/flp.conf \
-    $(COMMON_PATH)/gps/gps.conf:system/etc/gps.conf \
-    $(COMMON_PATH)/gps/izat.conf:system/etc/izat.conf \
-    $(COMMON_PATH)/gps/sap.conf:system/etc/sap.conf
-
-PRODUCT_PACKAGES += \
-    com.qualcomm.location \
-    gps.msm8974
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.gps.qc_nlp_in_use=1 \
-    persist.loc.nlp_name=com.qualcomm.location \
-    ro.gps.agps_provider=1
 
 # IPC Security Config
 PRODUCT_COPY_FILES += \
