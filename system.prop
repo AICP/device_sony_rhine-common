@@ -43,3 +43,11 @@ ro.qualcomm.bt.hci_transport=smd
 qcom.bluetooth.soc=smd
 ro.bt.bdaddr_path=/data/etc/bluetooth_bdaddr
 
+# Semc
+ro.semc.version.fs_revision=14.6.A.1.236
+ro.semc.version.fs=GLOBAL-LTE
+ro.semc.version.sw=1272-6084
+ro.semc.version.sw_revision=14.6.A.1.236
+ro.semc.version.sw_variant=GENERIC
+ro.semc.version.sw_type=user
+
