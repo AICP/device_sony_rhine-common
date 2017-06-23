@@ -1,16 +1,5 @@
 wlan.driver.ath=0
 
-# Audio offload
-audio.offload.buffer.size.kb=32
-audio.offload.gapless.enabled=false
-audio.offload.multiple.enabled=false
-audio.offload.pcm.enable=enable
-av.offload.enable=enable
-av.streaming.offload.enable=enable
-
-# Enable AAC 5.1 output
-media.aac_51_output_enabled=true
-
 # Voice Call
 ro.qc.sdk.audio.fluencetype=none
 persist.audio.dualmic.config=endfire
@@ -52,21 +41,4 @@ ro.qti.sensors.wu=false
 # Bluetooth
 ro.qualcomm.bt.hci_transport=smd
 ro.bt.bdaddr_path=/data/etc/bluetooth_bdaddr
-
-# HDMI
-persist.demo.hdmirotationlock=false
-
-# MDP
-debug.mdpcomp.logs=0
-
-# Time
-persist.timed.enable=true
-
-# Touchscreen
-ro.input.noresample=1
-
-# WFD
-persist.debug.wfd.enable=1
-persist.sys.wfd.virtual=0
-
 
