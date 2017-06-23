@@ -21,6 +21,8 @@ import /init.common.rc
 
 on early-boot
     exec /system/bin/sh /system/etc/init.qcom.wifi.sh
+    chown system system /sys/class/leds/wled:backlight/brightness
+    chown system system /sys/class/leds/wled:backlight/max_brightness
 
 on boot
     exec /system/bin/btnvtool -O
