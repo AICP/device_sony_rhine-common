@@ -63,6 +63,11 @@ on post-fs-data
     # Create /data/time folder for time-services
     mkdir /data/time/ 0700 system system
 
+on property:init.svc.bootanim=running
+    # Clear Sony boot splash
+    write /sys/class/graphics/fb0/blank 1
+    write /sys/class/graphics/fb0/blank 0
+
 service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
     class late_start
     user bluetooth
