@@ -77,7 +77,8 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     libshim_cald \
-    libshim_camera
+    libshim_camera \
+    libstlport
 
 # IPC Security Config
 PRODUCT_COPY_FILES += \
