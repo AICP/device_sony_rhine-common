@@ -96,6 +96,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     macaddrsetup
 
+# TimeKeep
+PRODUCT_PACKAGES += \
+    timekeep \
+    TimeKeep
+
 # NFC
 PRODUCT_PACKAGES += \
     nfc.qcom
