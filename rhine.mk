@@ -78,10 +78,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libboringssl-compat
 
-# RQBalance-PowerHAL configuration
-PRODUCT_COPY_FILES += \
-     $(COMMON_PATH)/rootdir/system/etc/rqbalance_config.xml:system/etc/rqbalance_config.xml
-
 # Camera
 PRODUCT_PACKAGES += \
     libshim_cald \
