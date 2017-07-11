@@ -80,6 +80,10 @@ PRODUCT_PACKAGES += \
     libshim_camera \
     libstlport
 
+# Connectivity
+PRODUCT_PACKAGES += \
+    libcnefeatureconfig
+
 # IPC Security Config
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/etc/sec_config:system/etc/sec_config
