@@ -133,13 +133,6 @@ service ims_regmanager /system/bin/exe-ims-regmanagerprocessnative
     group net_bt_admin inet radio wifi
     disabled
 
-# OSS time
-service timekeep /system/bin/timekeep restore
-    class late_start
-    user root
-    group root
-    oneshot
-
 # FM Radio
 on property:hw.fm.init=0
     write /sys/module/radio_iris_transport/parameters/fmsmd_set 0
