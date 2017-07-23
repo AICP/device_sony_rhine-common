@@ -139,3 +139,8 @@ on property:hw.fm.init=0
 
 on property:hw.fm.init=1
     write /sys/module/radio_iris_transport/parameters/fmsmd_set 1
+
+service time_daemon /system/bin/time_daemon
+    class late_start
+    user root
+    group root
