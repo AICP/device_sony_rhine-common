@@ -2,7 +2,7 @@
   {
     "repository":   "AICP/device_sony_common",
     "target_path":  "device/sony/common",
-    "branch":       "n7.1"
+    "branch":       "n7.1-aosp"
   },
   {
     "repository":   "sonyxperiadev/kernel",
