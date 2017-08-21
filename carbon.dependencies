@@ -13,12 +13,6 @@
   },
   {
     "remote"     : "lineage",
-    "repository" : "LineageOS/android_hardware_qcom_fm",
-    "target_path": "hardware/qcom/fm",
-    "revision"   : "cm-14.1"
-  },
-  {
-    "remote"     : "lineage",
     "repository" : "LineageOS/android_external_sony_boringssl-compat",
     "target_path": "external/sony/boringssl-compat",
     "revision"   : "cm-14.1"
