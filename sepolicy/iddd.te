@@ -1,0 +1,2 @@
+allow iddd self:netlink_socket { bind create write };
+
