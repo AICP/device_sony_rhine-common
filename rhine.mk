@@ -39,13 +39,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.google.android.nfc_extras.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml
 
-# Init
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/rootdir/fstab.qcom:root/fstab.qcom \
-    $(COMMON_PATH)/rootdir/init.qcom.rc:root/init.qcom.rc \
-    $(COMMON_PATH)/rootdir/init.camera.rc:root/init.camera.rc \
-    $(COMMON_PATH)/rootdir/ueventd.qcom.rc:root/ueventd.qcom.rc
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/c6x02.sh:c6x02.sh
 
@@ -84,7 +77,10 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/init.msm8974-common.rc:root/init.msm8974-common.rc \
     $(COMMON_PATH)/rootdir/init.sony.usb.rc:root/init.sony.usb.rc \
     $(COMMON_PATH)/rootdir/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
-    $(COMMON_PATH)/rootdir/init.qcom.power.rc:root/init.qcom.power.rc
+    $(COMMON_PATH)/rootdir/fstab.qcom:root/fstab.qcom \
+    $(COMMON_PATH)/rootdir/init.qcom.rc:root/init.qcom.rc \
+    $(COMMON_PATH)/rootdir/init.camera.rc:root/init.camera.rc \
+    $(COMMON_PATH)/rootdir/ueventd.qcom.rc:root/ueventd.qcom.rc
 
 
 PRODUCT_COPY_FILES += \
