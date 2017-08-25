@@ -55,6 +55,10 @@ PRODUCT_PACKAGES += \
     FM2 \
     FMRecord
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+   libbt-vendor
+
 # BoringSSL hacks
 PRODUCT_PACKAGES += \
     libboringssl-compat
