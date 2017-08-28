@@ -67,6 +67,7 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     libshim_cald \
+    libc_util \
     libshim_camera
 
 # Init
