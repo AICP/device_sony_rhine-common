@@ -70,7 +70,8 @@ TARGET_LD_SHIM_LIBS := \
 	/system/bin/mm-qcamera-daemon|libandroid.so \
 	/system/lib/libcammw.so|libsensor.so \
 	/system/lib/libsomc_chokoballpal.so|libGraphicBuffer.so \
-	/system/lib/hw/camera.qcom.so|libsensor.so
+	/system/lib/hw/camera.qcom.so|libsensor.so \
+	/system/bin/mm-qcamera-daemon|libc_util.so
 
 # Platform props
 TARGET_SYSTEM_PROP += device/sony/rhine-common/system.prop
