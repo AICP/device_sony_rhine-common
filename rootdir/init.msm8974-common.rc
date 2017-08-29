@@ -359,8 +359,8 @@ on post-fs-data
 # QMUX must be in multiple groups to support external process connections
 service qmuxd /system/bin/qmuxd
     class main
-    user root
-    group radio audio bluetooth gps nfc diag wakelock qcom_diag
+    user radio
+    group radio audio bluetooth gps nfc diag wakelock diag
 
 service netmgrd /system/bin/netmgrd
     class late_start
@@ -382,7 +382,7 @@ on property:ro.data.large_tcp_window_size=true
 service loc_launcher /system/bin/loc_launcher
     #loc_launcher will start as root and set its uid to gps
     class late_start
-    group gps inet net_raw qcom_diag net_admin wifi
+    group gps inet net_raw diag net_admin wifi
 
 # Start suntrold
 service suntrold /system/bin/suntrold
@@ -432,7 +432,7 @@ service audioserver /system/bin/audioserver
     class main
     user audioserver
     # media gid needed for /dev/fm (radio) and for /data/misc/media (tee)
-    group audio trimarea camera drmrpc inet media mediadrm net_bt net_bt_admin net_bw_acct qcom_diag
+    group audio trimarea camera drmrpc inet media mediadrm net_bt bluetooth net_bw_acct diag
     ioprio rt 4
 
 service drm /system/bin/drmserver
@@ -444,7 +444,7 @@ service drm /system/bin/drmserver
 service media /system/bin/mediaserver
     class main
     user media
-    group audio camera inet net_bt net_bt_admin net_bw_acct drmrpc mediadrm credmgr_client system
+    group audio camera inet net_bt bluetooth net_bw_acct drmrpc mediadrm credmgr_client system
     ioprio rt 4
 
 
@@ -464,12 +464,12 @@ service imsqmidaemon /system/bin/imsqmidaemon
     class late_start
     user system
     socket ims_qmid stream 0660 system radio
-    group radio net_raw log qcom_diag
+    group radio net_raw log diag
 
 service imsdatadaemon /system/bin/imsdatadaemon
     user system
     socket ims_datad stream 0660 system radio
-    group system wifi radio inet net_raw log qcom_diag net_admin
+    group system wifi radio inet net_raw log diag net_admin
     disabled
 
 on property:sys.ims.DATA_DAEMON_STATUS=1
@@ -480,12 +480,12 @@ on property:sys.ims.DATA_DAEMON_STATUS=1
 service ims_rtp_daemon /system/bin/ims_rtp_daemon
    user system
    socket ims_rtpd stream 0660 system radio
-   group radio net_raw diag qcom_diag log inet
+   group radio net_raw diag diag log inet
    disabled
 
 service imscmservice /system/bin/imscmservice
    user system
-   group radio net_raw diag qcom_diag log
+   group radio net_raw diag diag log
    disabled
 
 on property:sys.ims.QMI_DAEMON_STATUS=1

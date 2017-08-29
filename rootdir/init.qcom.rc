@@ -130,7 +130,7 @@ service ptt_socket_app /system/bin/ptt_socket_app
 
 service ims_regmanager /system/bin/exe-ims-regmanagerprocessnative
     class late_start
-    group net_bt_admin inet radio wifi
+    group bluetooth inet radio wifi
     disabled
 
 # OSS time
