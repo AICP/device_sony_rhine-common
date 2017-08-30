@@ -66,6 +66,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libboringssl-compat
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+   libbt-vendor
+
 # Camera
 PRODUCT_PACKAGES += \
     libshim_cald \
