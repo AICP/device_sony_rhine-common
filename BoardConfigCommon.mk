@@ -32,6 +32,9 @@ BOARD_KERNEL_SEPARATED_DT := true
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
+# Audio
+USE_LEGACY_LOCAL_AUDIO_HAL := true
+
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
