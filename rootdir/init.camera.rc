@@ -89,12 +89,12 @@ on post-fs-data
     mkdir /data/misc/keychain 0771 system system
     installkey /data
 
-    mkdir /idd/lost+found 0770 root root
-    mkdir /idd/output 0755 oem_5987 oem_5987
-    mkdir /idd/socket 0711 oem_5987 oem_5987
-    mkdir /idd/startup-prober 0700 root root
+    mkdir /mnt/idd/lost+found 0770 root root
+    mkdir /mnt/idd/output 0755 oem_5987 oem_5987
+    mkdir /mnt/idd/socket 0711 oem_5987 oem_5987
+    mkdir /mnt/idd/startup-prober 0700 root root
 
-    restorecon_recursive /idd
+    restorecon_recursive /mnt/idd
 
     # SONY: Camera
     mkdir /data/camera 0770 media camera
