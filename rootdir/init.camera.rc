@@ -25,6 +25,7 @@ on init
 :/system/lib/hw/camera.qcom.so|libsonycamera.so \
 :/system/lib/libcammw.so|libshim_cald.so \
 :/system/lib/hw/camera.qcom.so|libshim_camera.so \
+:/system/bin/mm-qcamera-daemon|libandroid.so \
 "
 
 	mkdir /idd 0751 oem_5987 oem_5987
