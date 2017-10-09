@@ -26,6 +26,8 @@ on init
 :/system/lib/libcammw.so|libshim_cald.so \
 :/system/lib/hw/camera.qcom.so|libshim_camera.so \
 :/system/bin/mm-qcamera-daemon|libandroid.so \
+:/system/lib/libcammw.so|libandroid.so \
+:/system/lib/libsomc_chokoballpal.so|libGraphicBuffer.so \
 "
 
 	mkdir /idd 0751 oem_5987 oem_5987
