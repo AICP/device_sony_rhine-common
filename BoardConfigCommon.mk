@@ -42,7 +42,7 @@ BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
 
 # CM Hardware
-BOARD_HARDWARE_CLASS += device/sony/rhine-common/cmhw
+BOARD_HARDWARE_CLASS += device/sony/rhine-common/lineagehw
 
 # Dumpstate
 BOARD_LIB_DUMPSTATE := libdumpstate.sony
