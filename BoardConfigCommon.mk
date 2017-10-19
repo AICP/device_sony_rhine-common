@@ -22,6 +22,7 @@ BOARD_VENDOR_PLATFORM := rhine
 PRODUCT_PLATFORM := rhine
 
 # Kernel information
+BOARD_KERNEL_IMAGE_NAME := zImage
 BOARD_KERNEL_BASE     := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE  := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3b7 ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 vmalloc=300M dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y
