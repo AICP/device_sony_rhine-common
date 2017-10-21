@@ -31,8 +31,8 @@ on init
 :/system/lib/hw/camera.qcom.so|libsensor.so \
 "
 
-	mkdir /idd 0751 oem_5987 oem_5987
-	mkdir /rca 0750 oem_5987 oem_5987
+	mkdir /idd 0751 system system
+	mkdir /rca 0750 system system
 
 on early-fs
     wait /dev/block/mmcblk0p1
@@ -43,7 +43,7 @@ on fs
     # mount apps_log
     #wait /dev/block/platform/msm_sdcc.1/by-name/apps_log
     #mount ext4 /dev/block/platform/msm_sdcc.1/by-name/apps_log /idd nosuid nodev noatime noexec barrier=0 discard
-    chown oem_5987 idd /idd
+    chown system idd /idd
     chmod 0751 /idd
     #exec /system/bin/rm -r /idd/lost+found
     symlink /idd /mnt/idd
@@ -94,8 +94,8 @@ on post-fs-data
     installkey /data
 
     mkdir /idd/lost+found 0770 root root
-    mkdir /idd/output 0755 oem_5987 oem_5987
-    mkdir /idd/socket 0711 oem_5987 oem_5987
+    mkdir /idd/output 0755 system system
+    mkdir /idd/socket 0711 system system
     mkdir /idd/startup-prober 0700 root root
 
     restorecon_recursive /idd
@@ -125,14 +125,14 @@ service taimport /system/bin/taimport
 
 service iddd /system/bin/iddd
     class main
-    user oem_5987
-    group oem_5987 log inet
+    user system
+    group system log inet cameraserver media
 
 # This script init /cache/CredentialManagerData if /data/credmgr doesn't meet our requirements
 service initcredmgr /system/bin/credmgrfirstboot.sh
     class late_start
     user system
-    group oem_5996
+    group cameraserver
     oneshot
 
 # When credmgrfirstboot is ready it set sys.credmgrdready=true.
@@ -156,8 +156,8 @@ service sct_service /system/bin/sct_service
  
 # Trim Area QMI service
 service ta_qmi_service /system/bin/ta_qmi_service
-    user oem_5998
-    group oem_5998 oem_5993 system root net_raw wakelock
+    user system
+    group system root net_raw wakelock
     disabled
 
 service scd /system/bin/scd
@@ -198,7 +198,7 @@ service tad_static /sbin/tad_static /dev/block/bootdevice/by-name/TA 0,16
     seclabel u:r:tad:s0
 service updatemiscta /system/bin/updatemiscta
     class main
-    user oem_5991
-    group oem_5993
+    user system
+    group system
     oneshot
 
