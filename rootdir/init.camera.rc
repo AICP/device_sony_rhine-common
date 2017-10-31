@@ -139,7 +139,6 @@ service initcredmgr /system/bin/credmgrfirstboot.sh
 # Start credmgrd after that
 on property:sys.credmgrdready=true
 start credmgrd
-chmod 0777 /dev/socket/credmgr
 
 # Start Credential manager daemon
 service credmgrd /system/bin/credmgrd
