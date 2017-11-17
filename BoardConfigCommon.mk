@@ -61,17 +61,17 @@ TARGET_INIT_VENDOR_LIB := libinit_rhine
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
-	/system/vendor/bin/credmgrd|libshims_signal.so \
-	/system/vendor/bin/iddd|libshims_idd.so \
-	/system/vendor/bin/suntrold|libshims_signal.so \
-	/system/lib/hw/camera.vendor.qcom.so|libsonycamera.so \
-	/system/lib/hw/camera.vendor.qcom.so|libshim_camera.so \
-	/system/lib/hw/camera.vendor.qcom.so|libshim_cald.so \
+	/system/vendor/bin/credmgrd|/system/vendor/lib/libshims_signal.so \
+	/system/vendor/bin/iddd|/system/vendor/lib/libshims_idd.so \
+	/system/vendor/bin/suntrold|/system/vendor/lib/libshims_signal.so \
+	/system/lib/hw/camera.vendor.qcom.so|/system/vendor/lib/libsonycamera.so \
+	/system/lib/hw/camera.vendor.qcom.so|/system/vendor/lib/libshim_camera.so \
+	/system/lib/hw/camera.vendor.qcom.so|/system/vendor/lib/libshim_cald.so \
 	/system/lib/hw/camera.vendor.qcom.so|libsensor.so \
-	/system/lib/libcammw.so|libshim_cald.so \
+	/system/lib/libcammw.so|/system/vendor/lib/libshim_cald.so \
 	/system/lib/libcammw.so|libsensor.so \
-	/system/lib/libsomc_chokoballpal.so|libGraphicBuffer.so \
-	/system/vendor/bin/mm-qcamera-daemon|libc_util.so \
+	/system/lib/libsomc_chokoballpal.so|/system/vendor/lib/libGraphicBuffer.so \
+	/system/vendor/bin/mm-qcamera-daemon|/system/vendor/lib/libc_util.so \
 	/system/vendor/bin/mm-qcamera-daemon|libandroid.so
 
 # Platform props
