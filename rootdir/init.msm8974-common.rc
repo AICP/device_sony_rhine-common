@@ -352,7 +352,7 @@ on post-fs-data
 service qmuxd /system/bin/qmuxd
     class main
     user radio
-    group radio audio bluetooth gps nfc diag wakelock diag
+    group radio audio bluetooth gps nfc diag wakelock
 
 service netmgrd /system/bin/netmgrd
     class late_start
