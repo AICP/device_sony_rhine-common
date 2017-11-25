@@ -66,6 +66,8 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    tad_static \
+    wait4tad_static \
     libshim_cald \
     libshim_camera
 
