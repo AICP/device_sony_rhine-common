@@ -134,7 +134,8 @@ PRODUCT_PACKAGES += \
     libnfc_jni \
     Nfc \
     Tag \
-    com.android.nfc_extras
+    com.android.nfc_extras \
+    nfc_nci.pn54x.default
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml
