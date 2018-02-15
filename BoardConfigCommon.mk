@@ -59,6 +59,19 @@ TARGET_INIT_VENDOR_LIB := libinit_rhine
 #BOARD_SEPOLICY_DIRS += \
 #    device/sony/rhine-common/sepolicy
 
+# Shims
+TARGET_LD_SHIM_LIBS := \
+	/system/bin/credmgrd|libshims_signal.so \
+	/system/bin/iddd|libshims_idd.so \
+	/system/bin/suntrold|libshims_signal.so \
+	/system/lib/hw/camera.qcom.so|libsonycamera.so \
+	/system/lib/libcammw.so|libshim_cald.so \
+	/system/lib/hw/camera.qcom.so|libshim_camera.so \
+	/system/bin/mm-qcamera-daemon|libandroid.so \
+	/system/lib/libcammw.so|libsensor.so \
+	/system/lib/libsomc_chokoballpal.so|libGraphicBuffer.so \
+	/system/lib/hw/camera.qcom.so|libsensor.so
+
 # Platform props
 TARGET_SYSTEM_PROP += device/sony/rhine-common/system.prop
 
