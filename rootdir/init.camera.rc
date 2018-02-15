@@ -18,20 +18,6 @@ on init
     # BoringSSL hacks
     export LD_PRELOAD "libboringssl-compat.so"
 
-	export LD_SHIM_LIBS " \
-:/system/bin/credmgrd|libshims_signal.so \
-:/system/bin/iddd|libshims_idd.so \
-:/system/bin/suntrold|libshims_signal.so \
-:/system/lib/hw/camera.qcom.so|libsonycamera.so \
-:/system/lib/libcammw.so|libshim_cald.so \
-:/system/lib/hw/camera.qcom.so|libshim_camera.so \
-:/system/bin/mm-qcamera-daemon|libandroid.so \
-:/system/lib/libcammw.so|libsensor.so \
-:/system/lib/libsomc_chokoballpal.so|libGraphicBuffer.so \
-:/system/lib/hw/camera.qcom.so|libsensor.so \
-:/system/bin/mm-qcamera-daemon|libc_util.so \
-"
-
 on early-fs
     wait /dev/block/mmcblk0p1
     class_start trimarea
