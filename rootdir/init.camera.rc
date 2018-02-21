@@ -17,6 +17,7 @@
 on init
     # BoringSSL hacks
     export LD_PRELOAD "libboringssl-compat.so"
+    export LD_DEBUG 1
 
 on early-fs
     wait /dev/block/mmcblk0p1
