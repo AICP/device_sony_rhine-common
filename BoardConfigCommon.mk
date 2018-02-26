@@ -64,10 +64,10 @@ TARGET_LD_SHIM_LIBS := \
 	/system/bin/credmgrd|libshims_signal.so \
 	/system/bin/iddd|libshims_idd.so \
 	/system/bin/suntrold|libshims_signal.so \
-	/system/lib/hw/camera.qcom.so|libsonycamera.so \
-	/system/lib/hw/camera.qcom.so|libshim_camera.so \
-	/system/lib/hw/camera.qcom.so|libshim_cald.so \
-	/system/lib/hw/camera.qcom.so|libsensor.so \
+	/system/lib/hw/camera.vendor.qcom.so|libsonycamera.so \
+	/system/lib/hw/camera.vendor.qcom.so|libshim_camera.so \
+	/system/lib/hw/camera.vendor.qcom.so|libshim_cald.so \
+	/system/lib/hw/camera.vendor.qcom.so|libsensor.so \
 	/system/lib/libcammw.so|libshim_cald.so \
 	/system/lib/libcammw.so|libsensor.so \
 	/system/lib/libsomc_chokoballpal.so|libGraphicBuffer.so \
