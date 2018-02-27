@@ -124,7 +124,7 @@ service ims_regmanager /system/bin/exe-ims-regmanagerprocessnative
     disabled
 
 # OSS time
-service timekeep /system/bin/timekeep restore
+service timekeep /system/vendor/bin/timekeep restore
     class late_start
     user root
     group root
