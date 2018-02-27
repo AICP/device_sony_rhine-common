@@ -1347,6 +1347,7 @@ typedef struct {
     RIL_CDMA_SignalStrength     CDMA_SignalStrength;
     RIL_EVDO_SignalStrength     EVDO_SignalStrength;
     RIL_LTE_SignalStrength_v8   LTE_SignalStrength;
+    int unknown;
 } RIL_SignalStrength_v8;
 
 typedef struct {
