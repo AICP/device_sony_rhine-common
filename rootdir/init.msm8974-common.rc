@@ -380,7 +380,7 @@ service suntrold /system/bin/suntrold
     class main
 
 # Thermal Manager service
-service thermanager /system/bin/thermanager /system/etc/thermanager.xml
+service thermanager /system/vendor/bin/thermanager /system/vendor/etc/thermanager.xml
     class main
     user root
     group root
@@ -437,7 +437,7 @@ service mediadrm /system/bin/mediadrmserver
     group mediadrm drmrpc
     ioprio rt 4
 
-service mpdecision /system/bin/mpdecision --avg_comp
+service mpdecision /system/vendor/bin/mpdecision --avg_comp
     class main
     user root
     group root readproc
