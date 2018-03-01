@@ -26,7 +26,7 @@ on early-boot
     chown system system /sys/class/leds/wled:backlight/max_brightness
 
 on boot
-    exec /system/bin/btnvtool -O
+    exec /system/vendor/bin/btnvtool -O
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
@@ -112,7 +112,7 @@ service wcnss-service /system/bin/wcnss_service
     disabled
     oneshot
 
-service ptt_socket_app /system/bin/ptt_socket_app
+service ptt_socket_app /system/vendor/bin/ptt_socket_app
     class main
     user system
     group system

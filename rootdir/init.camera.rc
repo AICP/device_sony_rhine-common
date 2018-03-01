@@ -53,7 +53,7 @@ on post-fs-data
     chown media camera /sys/devices/sony_camera_1/info
 
     # SONY: Import MiscTA to System properties
-    exec -- /system/bin/taimport property
+    exec -- /system/vendor/bin/taimport property
     setprop init.taimport.ready true
     # taimport ready, use this as trigger for multi-cdf-symlinker
 
@@ -62,7 +62,7 @@ on post-fs-data
     # touch /cache/credmgr.log
     # restorecon -R /cache/credmgr.log
 
-service taimport /system/bin/taimport
+service taimport /system/vendor/bin/taimport
     class late_start
     user root
     group system
@@ -81,7 +81,7 @@ on property:sys.credmgrdready=true
 start credmgrd
 
 # Start Credential manager daemon
-service credmgrd /system/bin/credmgrd
+service credmgrd /system/vendor/bin/credmgrd
     user system
     group system camera media
     socket credmgr stream 0660 system camera
@@ -98,7 +98,7 @@ service ta_qmi_service /system/vendor/bin/ta_qmi_service
     group system root net_raw wakelock
     disabled
 
-service scd /system/bin/scd
+service scd /system/vendor/bin/scd
     class late_start
     user system
     group system
