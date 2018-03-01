@@ -56,8 +56,8 @@ TARGET_QCOM_NO_FM_FIRMWARE := true
 TARGET_INIT_VENDOR_LIB := libinit_rhine
 
 # SELinux
-#BOARD_SEPOLICY_DIRS += \
-#    device/sony/rhine-common/sepolicy
+BOARD_SEPOLICY_DIRS += \
+    device/sony/rhine-common/sepolicy
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
