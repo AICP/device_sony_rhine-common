@@ -31,18 +31,18 @@
         Must be overridden in platform specific overlays
     -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>5</item>
-        <item>15</item>
-        <item>50</item>
-        <item>100</item>
-        <item>200</item>
-        <item>400</item>
-        <item>1000</item>
-        <item>2000</item>
-        <item>3000</item>
-        <item>5000</item>
-        <item>10000</item>
-        <item>30000</item>
+        <item>64</item>
+        <item>128</item>
+        <item>170</item>
+        <item>220</item>
+        <item>256</item>
+        <item>384</item>
+        <item>512</item>
+        <item>768</item>
+        <item>1024</item>
+        <item>1536</item>
+        <item>2048</item>
+        <item>4096</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -51,19 +51,19 @@
          The brightness values must be between 0 and 255 and be non-decreasing.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>11</item>
-        <item>18</item>
-        <item>27</item>
-        <item>38</item>
-        <item>48</item>
-        <item>55</item>
-        <item>64</item>
-        <item>74</item>
-        <item>120</item>
-        <item>164</item>
-        <item>225</item>
-        <item>255</item>
-        <item>255</item>
+        <item>10</item>   <!--    0 -->
+        <item>32</item>   <!--   64 -->
+        <item>64</item>   <!--  128 -->
+        <item>80</item>   <!--  170 -->
+        <item>96</item>   <!--  220 -->
+        <item>112</item>  <!--  256 -->
+        <item>128</item>  <!--  384 -->
+        <item>144</item>  <!--  512 -->
+        <item>176</item>  <!--  768 -->
+        <item>196</item>  <!-- 1024 -->
+        <item>208</item>  <!-- 1536 -->
+        <item>224</item>  <!-- 2048 -->
+        <item>255</item>  <!-- 4096 -->
     </integer-array>
 
     <!-- Array of output values for button backlight corresponding to the LUX values
