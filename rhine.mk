@@ -104,10 +104,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
 
-# GPS
-PRODUCT_PACKAGES += \
-    gps.msm8974
-
 # IPC Security Config
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/etc/sec_config:system/vendor/etc/sec_config
@@ -186,13 +182,6 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/media_codecs.xml:system/etc/media_codecs.xml \
     $(COMMON_PATH)/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
     $(COMMON_PATH)/media_profiles.xml:system/etc/media_profiles.xml \
-
-# GPS
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/gps/flp.conf:system/etc/flp.conf \
-    $(COMMON_PATH)/gps/gps.conf:system/etc/gps.conf \
-    $(COMMON_PATH)/gps/izat.conf:system/etc/izat.conf \
-    $(COMMON_PATH)/gps/sap.conf:system/etc/sap.conf
 
 # HWUI memory limits
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
