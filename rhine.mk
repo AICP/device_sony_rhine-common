@@ -181,7 +181,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/media_codecs.xml:system/etc/media_codecs.xml \
     $(COMMON_PATH)/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-    $(COMMON_PATH)/media_profiles.xml:system/etc/media_profiles.xml \
+    $(COMMON_PATH)/media_profiles_V1_0.xml:system/etc/media_profiles_V1_0.xml \
 
 # HWUI memory limits
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
