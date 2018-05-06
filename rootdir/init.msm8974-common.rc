@@ -393,7 +393,7 @@ service rmt_storage /system/vendor/bin/rmt_storage
     group system wakelock
 
 service sensors /system/vendor/bin/sensors.qcom
-    class core
+    class late_start
     user root
     group root wakelock
 
