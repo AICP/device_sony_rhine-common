@@ -57,3 +57,5 @@ ro.semc.version.sw_type=user
 
 # Secure discard
 ro.lockscreen.secdiscard=false
+
+persist.radio.adb_log_on=true
