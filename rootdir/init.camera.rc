@@ -98,10 +98,10 @@ service ta_qmi_service /system/vendor/bin/ta_qmi_service
     group system root net_raw wakelock
     disabled
 
-service scd /system/vendor/bin/scd
-    class late_start
-    user system
-    group system
+#service scd /system/vendor/bin/scd
+#    class late_start
+#    user system
+#    group system
 
 #service wvkbd_installer /system/bin/logwrapper /system/vendor/bin/wvkbd
 service wvkbd_installer /system/vendor/bin/wvkbd
