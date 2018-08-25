@@ -57,11 +57,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     e2fsck
 
+# FM Radio
 PRODUCT_PACKAGES += \
-    qcom.fmradio \
-    libqcomfm_jni \
-    FM2 \
-    FMRecord
+    FMRadio \
+    libfmjni
 
 # Bluetooth
 PRODUCT_PACKAGES += \
