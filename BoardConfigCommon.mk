@@ -52,9 +52,6 @@ AUDIO_FEATURE_ENABLED_FM := true
 BOARD_HAVE_QCOM_FM := true
 TARGET_QCOM_NO_FM_FIRMWARE := true
 
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_rhine
-
 # SELinux
 #BOARD_SEPOLICY_DIRS += \
 #    device/sony/rhine-common/sepolicy
