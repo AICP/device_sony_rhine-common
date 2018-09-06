@@ -126,6 +126,8 @@ PRODUCT_COPY_FILES += \
 BOARD_RIL_CLASS := ../../../$(COMMON_PATH)/ril/
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=SonyRIL
+PRODUCT_PACKAGES += \
+    libshim_ril_preload
 
 # TimeKeep
 PRODUCT_PACKAGES += \

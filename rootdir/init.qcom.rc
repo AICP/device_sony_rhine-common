@@ -20,6 +20,10 @@ import /init.camera.rc
 import /init.qcom.power.rc
 import /init.msm8974-common.rc
 
+on init
+    # BoringSSL hacks, RIL hacks
+    export LD_PRELOAD "libboringssl-compat.so:/system/vendor/lib/libshim_ril_preload.so"
+
 on early-boot
     #exec /system/bin/sh /system/etc/init.qcom.wifi.sh
     write /dev/wcnss_wlan 1
