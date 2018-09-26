@@ -126,6 +126,10 @@
 /dev/wcnss_wlan           0660   system     system
 /dev/wcnss_ctrl           0660   system     system
 
+
+# RTC
+/sys/devices/soc.0/qpnp-rtc-* since_epoch 0660 system system
+
 #
 # Change file permission and owner for sensors
 #
