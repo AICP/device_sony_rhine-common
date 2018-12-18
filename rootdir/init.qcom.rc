@@ -71,7 +71,8 @@ on post-fs-data
 
     # Create /data/time folder for time-services
     mkdir /data/time/ 0700 system system
-    
+    chmod 0770 /data/time/ats_2
+
     # Create the directories used by the Wireless subsystem
     mkdir /data/vendor/wifi 0771 wifi wifi
     mkdir /data/vendor/wifi/wpa 0770 wifi wifi
@@ -143,6 +144,7 @@ service timekeep /system/vendor/bin/timekeep restore
     user root
     group root
     oneshot
+    writepid /dev/cpuset/system-background/tasks
 
 # FM Radio
 on property:hw.fm.init=0
