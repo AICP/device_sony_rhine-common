@@ -10,6 +10,26 @@
     "branch": "p9.0"
   },
   {
+    "repository": "LineageOS/android_hardware_qcom_fm",
+    "target_path": "hardware/qcom/fm",
+    "branch": "lineage-16.0"
+  },
+  {
+    "repository": "LineageOS/android_external_ant-wireless_ant_native",
+    "target_path": "external/ant-wireless/ant_native",
+    "branch": "lineage-16.0"
+  },
+  {
+    "repository": "LineageOS/android_external_ant-wireless_ant_service",
+    "target_path": "external/ant-wireless/ant_service",
+    "branch": "lineage-16.0"
+  },
+  {
+    "repository": "LineageOS/android_external_ant-wireless_antradio-library",
+    "target_path": "external/ant-wireless/antradio-library",
+    "branch": "lineage-16.0"
+  },
+  {
     "repository": "CarbonROM/android_external_sony_boringssl-compat",
     "target_path": "external/sony/boringssl-compat",
     "branch": "cr-7.0"
