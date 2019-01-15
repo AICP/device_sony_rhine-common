@@ -35,6 +35,7 @@ BOARD_ANT_WIRELESS_DEVICE := "qualcomm-smd"
 
 # Audio
 USE_LEGACY_LOCAL_AUDIO_HAL := true
+AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
