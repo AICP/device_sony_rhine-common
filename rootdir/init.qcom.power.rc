@@ -90,4 +90,5 @@ on property:sys.boot_completed=1
 
     setprop sys.io.scheduler bfq
     rm /data/system/perfd/default_values
+    setprop vendor.post_boot.parsed 1
     start mpdecision
