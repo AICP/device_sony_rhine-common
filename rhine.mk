@@ -78,6 +78,10 @@ PRODUCT_PACKAGES += \
     libc_util \
     libshim_camera
 
+# Snap Camera
+PRODUCT_PACKAGES += \
+    SnapdragonCamera
+
 # Init
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/init.msm8974-common.rc:root/init.msm8974-common.rc \
