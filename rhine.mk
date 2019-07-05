@@ -78,6 +78,10 @@ PRODUCT_PACKAGES += \
     libc_util \
     libshim_camera
 
+# Music FX
+PRODUCT_PACKAGES += \
+    MusicFX
+
 # Snap Camera
 PRODUCT_PACKAGES += \
     SnapdragonCamera
