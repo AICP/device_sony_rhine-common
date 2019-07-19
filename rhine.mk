@@ -82,10 +82,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     MusicFX
 
-# Snap Camera
-PRODUCT_PACKAGES += \
-    SnapdragonCamera
-
 # Init
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/init.msm8974-common.rc:root/init.msm8974-common.rc \
