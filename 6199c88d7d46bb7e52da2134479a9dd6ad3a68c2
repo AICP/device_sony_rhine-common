@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b3888ac3_a1b8fb4c",
+        "filename": "aicp.dependencies",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2019-08-27T10:03:24Z",
+      "side": 1,
+      "message": "Need to remove that too..",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 28
+      },
+      "revId": "6199c88d7d46bb7e52da2134479a9dd6ad3a68c2",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": true
+    }
+  ]
+}
