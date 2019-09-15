@@ -63,7 +63,8 @@ TARGET_FS_CONFIG_GEN += device/sony/rhine-common/config.fs
 TARGET_INIT_VENDOR_LIB := libinit_rhine
 
 # SELinux
-#BOARD_SEPOLICY_DIRS += \
+BOARD_SEPOLICY_DIRS += \
+    device/sony/rhine-common/sepolicy-tmp
 #    device/sony/rhine-common/sepolicy
 
 # Shims
