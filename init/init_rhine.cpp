@@ -19,7 +19,7 @@
 
 #include "vendor_init.h"
 #include "property_service.h"
-#include "log.h"
+#include "log/log.h"
 #include "util.h"
 
 #include <sys/system_properties.h>
