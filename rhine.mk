@@ -202,4 +202,4 @@ PRODUCT_COPY_FILES += \
 
 # Include non-opensource parts
 $(call inherit-product, vendor/sony/rhine-common/rhine-common-vendor.mk)
-$(call inherit-product, vendor/sony/widevine/widevine.mk)
+#$(call inherit-product, vendor/sony/widevine/widevine.mk)
