@@ -81,8 +81,8 @@ PRODUCT_PACKAGES += \
     tad_static \
     wait4tad_static \
     libshim_cald \
-    libc_util \
     libshim_camera
+    #libc_util \
 
 # Music FX
 PRODUCT_PACKAGES += \
