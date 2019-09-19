@@ -25,12 +25,3 @@ LOCAL_PROPRIETARY_MODULE := true
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
-
-include $(CLEAR_VARS)
-
-LOCAL_SRC_FILES := ril_preload.c
-LOCAL_MODULE := libshim_ril_preload
-LOCAL_PROPRIETARY_MODULE := true
-LOCAL_MODULE_TAGS := optional
-
-include $(BUILD_SHARED_LIBRARY)
