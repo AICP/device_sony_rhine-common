@@ -81,7 +81,8 @@ TARGET_LD_SHIM_LIBS := \
 	/system/lib/libcammw.so|libsensor.so \
 	/system/lib/libsomc_chokoballpal.so|/system/vendor/lib/libshim_camera.so \
 	/system/vendor/bin/mm-qcamera-daemon|/system/vendor/lib/libc_util.so \
-	/system/vendor/bin/mm-qcamera-daemon|libandroid.so
+	/system/vendor/bin/mm-qcamera-daemon|libandroid.so \
+	/system/vendor/bin/iddd|libboringssl-compat.so \
 
 # Platform props
 TARGET_SYSTEM_PROP += device/sony/rhine-common/system.prop
