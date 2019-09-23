@@ -15,6 +15,35 @@
 
 LOCAL_PATH := $(call my-dir)
 
+# libshim_cald
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := \
+    gui/SensorManager.cpp \
+    symbols/Parcel.cpp \
+    utils/VectorImpl.cpp
+
+LOCAL_C_INCLUDES := \
+    $(LOCAL_PATH)/include \
+    external/safe-iop/include \
+    system/core/libutils
+
+LOCAL_SHARED_LIBRARIES := \
+    libcutils \
+    libgui \
+    libbinder \
+    libsensor \
+    libutils \
+    liblog
+
+LOCAL_MODULE := libshim_cald
+
+LOCAL_PROPRIETARY_MODULE := true
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+
+include $(BUILD_SHARED_LIBRARY)
+
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := atomic.c
