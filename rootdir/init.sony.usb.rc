@@ -41,6 +41,9 @@ on fs
     setprop persist.adb.nonblocking_ffs 0
     setprop ro.adb.nonblocking_ffs 0
 
+on charger
+    setprop sys.usb.config mtp
+
 on property:sys.usb.config=mtp
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 0FCE
