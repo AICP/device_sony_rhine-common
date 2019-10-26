@@ -74,7 +74,7 @@ service initcredmgr /system/vendor/bin/credmgrfirstboot.sh
 # When credmgrfirstboot is ready it set sys.credmgrdready=true.
 # Start credmgrd after that
 on property:sys.credmgrdready=true
-start credmgrd
+    start credmgrd
 
 # Start Credential manager daemon
 service credmgrd /system/vendor/bin/credmgrd
