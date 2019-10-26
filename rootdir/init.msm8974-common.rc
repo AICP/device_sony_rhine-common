@@ -15,7 +15,6 @@
 # limitations under the License.
 #
 
-import /init.sony.rc
 import /init.sony.usb.rc
 
 on early-init
