@@ -106,7 +106,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Partition information
-BOARD_ROOT_EXTRA_FOLDERS := idd lta-label
+BOARD_ROOT_EXTRA_FOLDERS := lta-label
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/sony/rhine-common/rootdir/fstab.full
