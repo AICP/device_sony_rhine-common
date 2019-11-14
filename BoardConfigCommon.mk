@@ -56,9 +56,6 @@ AUDIO_FEATURE_ENABLED_FM := true
 BOARD_HAVE_QCOM_FM := true
 TARGET_QCOM_NO_FM_FIRMWARE := true
 
-# Filesystem
-TARGET_FS_CONFIG_GEN += device/sony/rhine-common/config.fs
-
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_rhine
 
@@ -103,9 +100,6 @@ BOARD_PROVIDES_LIBRIL := true
 BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
-
-# Partition information
-BOARD_ROOT_EXTRA_FOLDERS := lta-label
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/sony/rhine-common/rootdir/fstab.full
