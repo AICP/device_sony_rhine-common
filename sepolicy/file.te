@@ -1,1 +1,2 @@
 type sysfs_wlanmac, fs_type, sysfs_type;
+type logo_rle, file_type;
