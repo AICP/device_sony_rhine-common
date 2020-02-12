@@ -373,12 +373,6 @@ service suntrold /system/vendor/bin/suntrold
     oneshot
     class main
 
-# Thermal Manager service
-service thermanager /system/vendor/bin/thermanager /system/vendor/etc/thermanager.xml
-    class main
-    user root
-    group root
-
 service irsc_util /system/vendor/bin/irsc_util "/system/vendor/etc/sec_config"
     class main
     user root
