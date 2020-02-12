@@ -73,6 +73,8 @@ on post-fs-data
     # Create directory used by bluetooth subsystem
     mkdir /data/vendor/bluetooth 2770 bluetooth bluetooth
 
+    # Set owner of macaddr node
+    chown system system /sys/devices/fb000000.qcom,wcnss-wlan/wcnss_mac_addr
 
 on property:init.svc.bootanim=running
     # Clear Sony boot splash
@@ -90,12 +92,6 @@ on property:vendor.bluetooth.hciattach=true
 
 on property:vendor.bluetooth.hciattach=false
     setprop vendor.bluetooth.status off
-
-# Wi-Fi and BT MAC addresses
-service macaddrsetup /system/vendor/bin/macaddrsetup /sys/devices/fb000000.qcom,wcnss-wlan/wcnss_mac_addr
-    class late_start
-    user root
-    oneshot
 
 service hw_config /system/bin/sh /system/etc/hw_config.sh
     class main

@@ -46,6 +46,9 @@ ro.bt.bdaddr_path=/data/etc/bluetooth_bdaddr
 # FM
 vendor.hw.fm.internal_antenna=true
 
+# macaddrsetup
+ro.vendor.wifi.addr_path=/sys/devices/fb000000.qcom,wcnss-wlan/wcnss_mac_addr
+
 # Semc
 ro.semc.version.fs_revision=14.6.A.1.236
 ro.semc.version.fs=GLOBAL-LTE
