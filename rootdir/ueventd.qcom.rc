@@ -149,7 +149,7 @@
 /dev/hidraw2                                     0666  system  system
 
 # FM
-/sys/module/radio_iris_transport/parameters           fmsmd_set 0660 system system
+/sys/module/radio_iris_transport/parameters/fmsmd_set 0660 system system
 
 # MHL
 /sys/devices/f9967000.i2c/i2c-4/4-0072/mhl/sii8334    mouse_mode   0660  system  system
