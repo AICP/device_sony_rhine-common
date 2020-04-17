@@ -65,10 +65,6 @@ on boot
 on post-fs-data
     mkdir /data/persist 0770 system system
 
-    # Create /data/time folder for time-services
-    mkdir /data/time/ 0700 system system
-    chmod 0770 /data/time/ats_2
-
     # Create the directories used by the Wireless subsystem
     mkdir /data/vendor/wifi 0771 wifi wifi
     mkdir /data/vendor/wifi/wpa 0770 wifi wifi
@@ -138,14 +134,6 @@ service ims_regmanager /system/bin/exe-ims-regmanagerprocessnative
     class late_start
     group bluetooth inet radio wifi
     disabled
-
-# OSS time
-service timekeep /system/vendor/bin/timekeep restore
-    class late_start
-    user root
-    group root
-    oneshot
-    writepid /dev/cpuset/system-background/tasks
 
 # FM Radio
 on property:hw.fm.init=0
