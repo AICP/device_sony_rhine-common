@@ -22,20 +22,20 @@
 #include "log/log.h"
 #include "util.h"
 
+#include <android-base/properties.h>
 #include <sys/system_properties.h>
 
-static void import_kernel_nv(const std::string& key,
-        const std::string& value, bool for_emulator __attribute__((unused)))
+static void import_kernel_nv(const std::string& key, const std::string& value)
 {
     if (key.empty()) return;
 
     // We only want the bootloader version
     if (key == "oemandroidboot.s1boot") {
-		android::init::property_set("ro.boot.oemandroidboot.s1boot", value.c_str());
+		android::base::SetProperty("ro.boot.oemandroidboot.s1boot", value.c_str());
     }
 }
 
 void vendor_load_properties()
 {
-    android::init::import_kernel_cmdline(0, import_kernel_nv);
+    android::init::ImportKernelCmdline(import_kernel_nv);
 }
