@@ -64,7 +64,7 @@ BOARD_SEPOLICY_DIRS += \
     device/sony/rhine-common/sepolicy
 
 # Shims
-TARGET_LD_SHIM_LIBS := \
+TARGET_LD_SHIM_LIBS += \
 	/system/vendor/bin/credmgrd|/system/vendor/lib/libshims_signal.so \
 	/system/vendor/bin/iddd|/system/vendor/lib/libshims_idd.so \
 	/system/vendor/bin/suntrold|/system/vendor/lib/libshims_signal.so \
