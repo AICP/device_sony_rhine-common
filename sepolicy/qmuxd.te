@@ -1,2 +1,0 @@
-allow qmuxd sysfs:file read;
-

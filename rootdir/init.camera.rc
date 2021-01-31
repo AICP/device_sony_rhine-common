@@ -36,7 +36,7 @@ on post-fs-data
 on post-fs-data
     # SONY: Start early TA-users
     mkdir /data/etc 0755 root shell
-    exec -- /system/vendor/bin/taimport
+    start taimport
 
     # SONY: Create dir for Widevine keybox
     mkdir /data/persist/wv 0700 system system
@@ -49,7 +49,7 @@ on post-fs-data
     chown media camera /sys/devices/sony_camera_1/info
 
     # SONY: Import MiscTA to System properties
-    exec -- /system/vendor/bin/taimport property
+    start property_taimport
     setprop init.taimport.ready true
     # taimport ready, use this as trigger for multi-cdf-symlinker
 
@@ -59,16 +59,22 @@ on post-fs-data
     # restorecon -R /cache/credmgr.log
 
 service taimport /system/vendor/bin/taimport
-    class late_start
-    user root
+    user system
     group system
     oneshot
+    disabled
+
+service property_taimport /system/vendor/bin/taimport property
+    user system
+    group system
+    oneshot
+    disabled
 
 # This script init /cache/CredentialManagerData if /data/credmgr doesn't meet our requirements
 service initcredmgr /system/vendor/bin/credmgrfirstboot.sh
     class late_start
-    user root
-    group root
+    user system
+    group system
     oneshot
 
 # When credmgrfirstboot is ready it set sys.credmgrdready=true.
@@ -91,7 +97,7 @@ service sct_service /system/vendor/bin/sct_service
 # Trim Area QMI service
 service ta_qmi_service /system/vendor/bin/ta_qmi_service
     user system
-    group system root net_raw wakelock
+    group system net_raw wakelock
     disabled
 
 #service scd /system/vendor/bin/scd
@@ -128,7 +134,7 @@ service tad_static /vendor/bin/tad_static /dev/block/bootdevice/by-name/TA 0,16
 #service tad_static /vendor/bin/tad_static /data/credmgr/ta_part.bin 0,16
     class trimarea
     user system
-    group system root camera media
+    group system camera media
     socket tad stream 0770 system system
 
 service updatemiscta /system/vendor/bin/updatemiscta

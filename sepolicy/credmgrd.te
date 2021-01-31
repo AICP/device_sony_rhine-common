@@ -1,0 +1,10 @@
+init_daemon_domain(credmgrd)
+
+allow credmgrd firmware_file:file r_file_perms;
+allow credmgrd ion_device:chr_file r_file_perms;
+allow credmgrd tad:unix_stream_socket connectto;
+allow credmgrd tad_socket:sock_file rw_file_perms;
+allow credmgrd tee_device:chr_file rw_file_perms;
+
+# Needed to create /data/credmgr
+allow credmgrd credmgrd_data_file:file create_file_perms;

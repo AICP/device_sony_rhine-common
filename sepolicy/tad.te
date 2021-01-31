@@ -1,2 +1,1 @@
-allow tad proc_stat:file { getattr open read };
-
+init_daemon_domain(tad)
