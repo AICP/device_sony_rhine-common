@@ -1,2 +1,0 @@
-allow netmgrd system_file:file execmod;
-
