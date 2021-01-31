@@ -1,8 +1,37 @@
-/sys/devices/fb000000.qcom,wcnss-wlan/wcnss_mac_addr    u:object_r:sysfs_wlanmac:s0
+# Camera flash
+/sys/devices/pm8941-flash-[0-9]+(/.*)?                                      u:object_r:sysfs_graphics:s0
+
+# Credential Manager
+/data/credmgr(/.*)?                                                         u:object_r:credmgrd_data_file:s0
+/data/suntory(/.*)?                                                         u:object_r:credmgrd_data_file:s0
+/dev/socket/credmgr                                                         u:object_r:credmgrd_socket:s0
+/dev/socket/suntory(/.*)?                                                   u:object_r:credmgrd_socket:s0
+/(vendor|system/vendor)/bin/credmgrd                                        u:object_r:credmgrd_exec:s0
+/(vendor|system/vendor)/bin/credmgrfirstboot\.sh                            u:object_r:credmgrd_exec:s0
+/(vendor|system/vendor)/bin/suntrold                                        u:object_r:credmgrd_exec:s0
+
+# executables
+/system/bin/clean_scratch_files                                             u:object_r:clean_scratch_files_exec:s0
+
+# Radio
+/dev/rfkill                                                                 u:object_r:wlan_device:s0
+
+# SCT
+/(vendor|system/vendor)/bin/sct_service                                     u:object_r:sct_exec:s0
+
+# sysfs
+/sys/devices/[a-z0-9]+\.i2c/i2c-[0-9]+/[0-9]+-[0-9]+/power_supply(/.*)?     u:object_r:sysfs_battery_supply:s0
+/sys/devices/virtual/graphics/fb[0-9](/.*)?                                 u:object_r:sysfs_graphics:s0
+/sys/devices/virtual/input(/.*)?                                            u:object_r:sysfs_input:s0
+/sys/module/hci_smd(/.*)?                                                   u:object_r:sysfs_bluetooth_writable:s0
+/sys/module/hci_uart(/.*)?                                                  u:object_r:sysfs_bluetooth_writable:s0
+/sys/module/qpnp_charger(/.*)?                                              u:object_r:sysfs_battery_supply:s0
+/sys/module/qpnp_power_on(/.*)?                                             u:object_r:sysfs_battery_supply:s0
 
 # Trim Area daemon
-/system/vendor/bin/tad_static                           u:object_r:tad_exec:s0
-/system/vendor/bin/wait4tad_static                      u:object_r:tad_exec:s0
-
-# WIFI
-/sys/module/wlan/parameters/fwpath                      u:object_r:sysfs_wlan_fwpath:s0
+/dev/socket/tad                                                             u:object_r:tad_socket:s0
+/(vendor|system/vendor)/bin/tad_static                                      u:object_r:tad_exec:s0
+/(vendor|system/vendor)/bin/ta_qmi_service                                  u:object_r:tad_exec:s0
+/(vendor|system/vendor)/bin/taimport                                        u:object_r:tad_exec:s0
+/(vendor|system/vendor)/bin/updatemiscta                                    u:object_r:tad_exec:s0
+/(vendor|system/vendor)/bin/wait4tad_static                                 u:object_r:tad_exec:s0
