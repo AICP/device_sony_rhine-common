@@ -68,9 +68,6 @@ on early-boot
 
     write /sys/kernel/boot_adsp/boot 1
 
-    # Run pre_hw_config.sh before entering charge only mode.
-    exec /system/bin/sh /system/etc/pre_hw_config.sh
-
 on boot
     write /sys/module/qpnp_power_on/parameters/forcecrash_on 1
 
