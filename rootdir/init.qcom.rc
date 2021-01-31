@@ -27,7 +27,7 @@ on early-boot
     chown system system /sys/class/leds/wled:backlight/max_brightness
 
 on boot
-    exec /system/vendor/bin/btnvtool -O
+    start config_bt_addr
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
@@ -94,12 +94,9 @@ on property:vendor.bluetooth.hciattach=false
 # Wi-Fi and BT MAC addresses
 service macaddrsetup /system/vendor/bin/macaddrsetup /sys/devices/fb000000.qcom,wcnss-wlan/wcnss_mac_addr
     class late_start
-    user root
-    oneshot
-
-service hw_config /system/bin/sh /system/etc/hw_config.sh
-    class main
-    user root
+    user system
+    group system bluetooth wifi
+    capabilities NET_ADMIN NET_RAW
     oneshot
 
 service wpa_supplicant /system/vendor/bin/hw/wpa_supplicant \
@@ -133,6 +130,12 @@ service ptt_socket_app /system/vendor/bin/ptt_socket_app
 service ims_regmanager /system/bin/exe-ims-regmanagerprocessnative
     class late_start
     group bluetooth inet radio wifi
+    disabled
+
+service config_bt_addr /system/vendor/bin/btnvtool -O
+    user bluetooth
+    group bluetooth radio
+    oneshot
     disabled
 
 # FM Radio
