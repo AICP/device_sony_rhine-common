@@ -1,5 +1,27 @@
-#============= init ==============
-allow init wcnss_device:chr_file write;
-allow init wcnss_device:chr_file write;
+allow init socket_device:sock_file create_file_perms;
+allow init sysfs_graphics:{ file lnk_file } rw_file_perms;
+allow init sysfs_input:{ file lnk_file } { r_file_perms setattr};
+allow init wcnss_device:chr_file w_file_perms;
 
-allow init sysfs_fm:file { open write };
+allow init {
+    sysfs_addrsetup
+    sysfs_bluetooth_writable
+    sysfs_livedisplay_tuneable
+    sysfs_wlan_fwpath
+}:file setattr;
+
+allow init {
+    sysfs_cpu_boost
+    sysfs_devices_system_cpu
+    sysfs_lowmemorykiller
+    sysfs_mmc_host
+    sysfs_msm_power
+    sysfs_msm_perf
+    sysfs_poweron_alarm
+    sysfs_thermal
+}:file w_file_perms;
+
+allow init {
+    sysfs_battery_supply
+    sysfs_usb_supply
+}:file {setattr w_file_perms};

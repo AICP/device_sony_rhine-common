@@ -1,2 +1,2 @@
 allow thermanager sysfs_leds:dir search;
-
+allow thermanager sysfs_leds:file read;
