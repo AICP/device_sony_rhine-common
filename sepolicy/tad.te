@@ -1,2 +1,13 @@
-allow tad proc_stat:file { getattr open read };
+init_daemon_domain(tad)
 
+allow tad block_device:dir search;
+allow tad proc_stat:file r_file_perms;
+allow tad self:socket create_socket_perms;
+allow tad sysfs_wake_lock:file rw_file_perms;
+allow tad tad_block_device:blk_file rw_file_perms;
+allow tad tad_socket:sock_file rw_file_perms;
+
+allowxperm tad tad_block_device:blk_file ioctl BLKGETSIZE;
+
+set_prop(tad, exported_secure_prop)
+set_prop(tad, ta_prop)

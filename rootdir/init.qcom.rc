@@ -27,7 +27,7 @@ on early-boot
     chown system system /sys/class/leds/wled:backlight/max_brightness
 
 on boot
-    exec /system/vendor/bin/btnvtool -O
+    start config_bt_addr
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
@@ -93,11 +93,6 @@ on property:vendor.bluetooth.hciattach=true
 on property:vendor.bluetooth.hciattach=false
     setprop vendor.bluetooth.status off
 
-service hw_config /system/bin/sh /system/etc/hw_config.sh
-    class main
-    user root
-    oneshot
-
 service wpa_supplicant /system/vendor/bin/hw/wpa_supplicant \
     -O/data/vendor/wifi/wpa/sockets -puse_p2p_group_interface=1 \
     -g@android:wpa_wlan0
@@ -129,6 +124,12 @@ service ptt_socket_app /system/vendor/bin/ptt_socket_app
 service ims_regmanager /system/bin/exe-ims-regmanagerprocessnative
     class late_start
     group bluetooth inet radio wifi
+    disabled
+
+service config_bt_addr /system/vendor/bin/btnvtool -O
+    user bluetooth
+    group bluetooth radio
+    oneshot
     disabled
 
 # FM Radio
