@@ -108,9 +108,9 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/ueventd.qcom.rc:root/ueventd.qcom.rc
 
 
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/rootdir/system/vendor/bin/credmgrfirstboot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/credmgrfirstboot.sh
-
+PRODUCT_PACKAGES += \
+    credmgrfirstboot.sh \
+    suntrold.sh
 
 # Connectivity
 PRODUCT_PACKAGES += \

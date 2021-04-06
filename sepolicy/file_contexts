@@ -9,6 +9,7 @@
 /(vendor|system/vendor)/bin/credmgrd                                        u:object_r:credmgrd_exec:s0
 /(vendor|system/vendor)/bin/credmgrfirstboot\.sh                            u:object_r:credmgrd_exec:s0
 /(vendor|system/vendor)/bin/suntrold                                        u:object_r:credmgrd_exec:s0
+/(vendor|system/vendor)/bin/suntrold.sh                                     u:object_r:credmgrd_exec:s0
 
 # executables
 /system/bin/clean_scratch_files                                             u:object_r:clean_scratch_files_exec:s0
