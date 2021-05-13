@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ed020f95_05b38174",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1331
+      },
+      "writtenOn": "2021-05-13T11:30:59Z",
+      "side": 1,
+      "message": "This requires an update of hardware_sony_macaddrsetup dependency.\n\nIn detail this commit: https://github.com/LineageOS/android_hardware_sony_macaddrsetup/commit/38cf3559a91a84b30a52e343e4b42982824a7505",
+      "revId": "9e98fd7213d71b78471edf1736c933c95b16bb4b",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
