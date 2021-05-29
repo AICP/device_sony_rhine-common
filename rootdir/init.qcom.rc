@@ -25,6 +25,7 @@ on early-boot
     write /dev/wcnss_wlan 1
     chown system system /sys/class/leds/wled:backlight/brightness
     chown system system /sys/class/leds/wled:backlight/max_brightness
+    chmod 0664 /sys/class/leds/wled:backlight/max_brightness
 
 on boot
     start config_bt_addr
